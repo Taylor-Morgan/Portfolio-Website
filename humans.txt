@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Taylor Morgan -- Web Designer/Owner
+
+# THANKS
+
+    Melissa, for supporting me.
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    HTML5 Boilerplate
