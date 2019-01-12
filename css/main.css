@@ -5,21 +5,26 @@
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-    background-color: #bbdbff;
+ 
+ /* ==========================================================================
+ Base styles: opinionated defaults
+ ========================================================================== */
+ 
+ html {
+     color: #222;
+     font-size: 1em;
+     line-height: 1.4;
+     background-color: #bbdbff;
 }
-
+    
 body {
     /*Leave room for navbar at top of page*/
-    padding-top: 40px;
+    padding-top: 40vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
 }
 
 /*
@@ -131,8 +136,30 @@ textarea {
     background: rgb(16, 214, 228);
 }
 
+.welcome p {
+    padding: 35vh 10vh 10vh;
+    text-align: justify;
 
+}
 
+.work {
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-flow: row-reverse wrap; /* Safari 6.1+ */
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;
+    align-items: center;
+}
+
+.portfolioItem {
+    width: 35vw;
+    flex: 0 1 content;
+}
+
+.portfolioItem img {
+    width: 10vw;
+    flex: 0 1 content;
+}
 
 
 
