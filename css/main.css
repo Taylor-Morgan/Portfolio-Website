@@ -143,20 +143,27 @@ textarea {
 }
 
 .work {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: -webkit-flex; /* Safari */
     -webkit-flex-flow: row-reverse wrap; /* Safari 6.1+ */
     display: flex;
     flex-flow: row wrap;
-    align-content: space-around;
+    justify-content: space-around;
     align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
-.portfolioItem {
+.work-item {
+    background: #020061;
     width: 35vw;
     flex: 0 1 content;
 }
 
-.portfolioItem img {
+.work-item img {
     width: 10vw;
     flex: 0 1 content;
 }
