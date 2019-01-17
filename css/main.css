@@ -12,10 +12,17 @@
  
  html {
      color: #222;
-     font-size: 1em;
+     font-size: 17px;
      line-height: 1.4;
      background-color: #bbdbff;
 }
+
+@media (max-width: 900px) {
+    html { font-size: 15px; }
+  }
+  @media (max-width: 400px) {
+    html { font-size: 13px; }
+  }
     
 body {
     /*Leave room for navbar at top of page*/
@@ -107,7 +114,11 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-.navbarClass {
+.spacer {
+    flex-grow: 1;
+}
+
+.navbar-container {
     overflow: hidden;
     background-color: #087bff;
     position: fixed;
@@ -115,6 +126,7 @@ textarea {
     width: 100%;
     margin-top: 0;
     text-align: center;
+    font-size: 1.2rem;
     display: -webkit-flex; /* Safari */
     -webkit-flex-flow: row-reverse wrap; /* Safari 6.1+ */
     display: flex;
@@ -122,24 +134,40 @@ textarea {
     justify-content: center;
 }
 
-.navbarClass a {
+.navbar-container a {
     float: left;
     display: block;
     color: #020061;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1em 0.7em 1em;
     text-decoration: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.navbarClass a:hover {
+.navbar-container a:hover {
     background: rgb(16, 214, 228);
 }
 
-.welcome p {
-    padding: 35vh 10vh 10vh;
-    text-align: justify;
+.welcome {
+    display: flex;
+    flex-flow: column nowrap;
+}
 
+.welcome h1 {
+    font-size: 5vh;
+}
+
+.welcome p {
+    text-align: justify;
+    font-size: 3vh;
+    align-content: center;
+    align-items: center;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+.highlight-name {
+    color: #040196;
 }
 
 .work {
@@ -155,6 +183,10 @@ textarea {
     padding: 0;
     margin: 0;
     list-style: none;
+}
+
+.work-header {
+
 }
 
 .work-item {
