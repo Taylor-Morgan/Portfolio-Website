@@ -1,0 +1,304 @@
+* 
+    padding: 0
+    margin: 0
+
+html
+    font-size: 16px
+
+body
+    background-color: #2E9CCA
+    color: #464866
+    padding-top: 10vh
+
+li
+    list-style: none
+
+a
+    color: #C1C8E4
+    &:hover, &:focus
+        color: #C1C8E4
+        text-decoration: none
+
+h1 
+    color: #C1C8E4
+    text-align: center
+    margin-top: 4%
+    font-size: 412.5%
+    > small
+        display: block
+        color: #AAABB8
+    .logo
+        font-size: 230%
+        font-family: 'Brush Script MT', cursive
+        width: 200px
+        margin-left: -20px
+
+h2 
+    font-size: 245%
+    margin-top: 140px
+    &:after 
+        display: block
+        margin: 42px 0
+        content: ""
+
+h3
+    font-weight: bold
+
+h4
+    font-size: 92%
+
+h6
+    color: #F0F0F0
+
+.noir
+    display: block
+    background-color: black
+    padding: 18px
+    border: 3px solid #C1C8E4
+
+.vertical-list
+    li
+        float: left
+
+.blue-border
+    border: 2px solid #114190
+
+.magenta-border
+    border: 2px solid #e11a61
+
+.purple-border
+    border: 2px solid #9d1098
+
+.red-border
+    border: 2px solid #9d102b
+
+.overflow
+    overflow: hidden
+
+.overlay
+    background-color: rgba(4, 14, 22, 0.83)
+    height: 100%
+    width: 100%
+    padding-bottom: 80px
+
+.welcome
+    padding-top: 10vh
+    p
+        padding: 35vh 20vh 10vh
+        text-align: justify
+        font-size: 1.3em
+    h1
+        padding: 8vh 10vh 0vh
+
+.description
+    span
+        margin-left: 10px
+    .tools
+        margin-top: 20px
+        overflow: hidden
+    li
+        margin-top: 5px
+        background-color: #114190
+        margin-right: 10px
+        padding: 10px
+        color: #C1C8E4
+
+#portfolio
+    padding-bottom: 80px
+    h2
+        color: #C1C8E4
+        margin-bottom: 40px
+        text-align: center
+    h3
+        color: #C1C8E4
+        margin-bottom: 40px
+        text-align: center
+    .row
+        margin: 0px
+        box-sizing: border-box
+        padding: 0 60px
+    .description
+        position: absolute
+        top: 0px
+        left: 0px
+        padding: 15px
+        > *
+            display: none
+            font-size: 90%
+    p
+        color: #C1C8E4
+        margin-bottom: 30px
+        line-height: 230%
+    p, .tools
+        width: 100%
+    div section
+        cursor: pointer
+    div:nth-child(even)
+        section
+            background-color: #25274D
+            padding: 10px
+            border: 3px solid #464866
+    img
+        width: 100%
+    section
+        height: 100%
+        margin-bottom: 20px
+        width: 50%
+        float: left
+        &:hover
+            .overlay
+                img
+                    opacity: 0
+                    transition: opacity 0.32s
+                .description > *
+                    display: block
+                .heading
+                    visibility: hidden
+                a
+                    .link
+                        display: block
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 100%
+                        height: 100%
+                        z-index: 100
+            .description
+                top: 100px
+                transition: top 0.5s
+    .overlay
+        position: relative
+        padding-bottom: 0px
+        overflow: auto
+        .heading
+            color: #C1C8E4
+            padding: 15px
+            text-align: center
+            position: relative
+            margin: 0 auto
+            font-size: 18px
+            letter-spacing: 2px
+            span
+                color: #635757
+                display: block
+                margin: 40px 0px
+                font-size: 200%
+    .description
+        h4
+            color: white
+
+#contact
+    a 
+        margin-right: 10px
+        margin-left: 10px
+        font-size: 1.5em
+    .container
+        text-align: center
+        margin-bottom: 40px
+    p
+        text-align: center
+        font-size: 2em
+    h1 
+        font-size: 3em
+
+.copyright
+    p
+        font-size: 0.8em
+
+.navbarClass
+    overflow: hidden
+    background-color: #25274D
+    position: fixed
+    top: 0
+    width: 100%
+    margin-top: 0
+    text-align: center
+    display: -webkit-flex
+    -webkit-flex-flow: row-reverse wrap
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    z-index: 2
+    a
+        float: left
+        display: block
+        color: #2E9CCA
+        text-align: center
+        padding: .875em 1em
+        text-decoration: none
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        &:hover
+            background: #2E9CCA
+            color: #25274D
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1200px)
+    #portfolio [class^="col"] section
+        width: 80%
+        margin-right: auto
+        margin-left: auto
+        margin-bottom: 10px
+        min-height: 400px
+        &.overlay
+            width: 100%
+            height: auto
+        img
+            width: 100%
+            height: auto
+        section:hover
+            .overlay
+                .heading
+                    span
+                        -webkit-transform: rotate(90deg)
+                        transform: rotate(90deg)
+                        top: 70px
+                        left: -240px
+                        position: relative
+
+@media screen and (max-width: 990px)
+    #portfolio
+        h2
+            font-size: 200%
+        h3
+            font-size: 150%
+        .description > *
+            font-size: 75%
+
+@media screen and (max-width: 790px)
+    .welcome
+        p
+            padding: 35vh 10vh 10vh
+        h1
+            font-size: 3em
+            padding: 15vh 10vh 5vh
+    #portfolio
+        body
+            font-size: 14px
+            text-align: center
+        h2
+            margin-top: 60px
+        input
+            text-align: center
+        .description
+            > *
+                font-size: 85%
+            p
+                margin-top: 40px
+        section
+            font-size: 10px
+            min-height: 328.2px
+            &:hover
+                .description
+                    top: 30px
+        p, h6
+            text-align: left
+
+@media screen and (max-width: 480px)
+    .social-links
+        width: 100%
+        li
+            display: block
+            width: 100%
+    h1
+        font-size: 300%

@@ -1,0 +1,441 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #2E9CCA;
+  color: #464866;
+  padding-top: 10vh;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #C1C8E4;
+
+  &:hover, &:focus {
+    color: #C1C8E4;
+    text-decoration: none;
+  }
+}
+
+h1 {
+  color: #C1C8E4;
+  text-align: center;
+  margin-top: 4%;
+  font-size: 412.5%;
+
+  > small {
+    display: block;
+    color: #AAABB8;
+  }
+
+  .logo {
+    font-size: 230%;
+    font-family: "Brush Script MT", cursive;
+    width: 200px;
+    margin-left: -20px;
+  }
+}
+
+h2 {
+  font-size: 245%;
+  margin-top: 140px;
+
+  &:after {
+    display: block;
+    margin: 42px 0;
+    content: "";
+  }
+}
+
+h3 {
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 92%;
+}
+
+h6 {
+  color: #F0F0F0;
+}
+
+.noir {
+  display: block;
+  background-color: black;
+  padding: 18px;
+  border: 3px solid #C1C8E4;
+}
+
+.vertical-list {
+  li {
+    float: left;
+  }
+}
+
+.blue-border {
+  border: 2px solid #114190;
+}
+
+.magenta-border {
+  border: 2px solid #e11a61;
+}
+
+.purple-border {
+  border: 2px solid #9d1098;
+}
+
+.red-border {
+  border: 2px solid #9d102b;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.overlay {
+  background-color: rgba(4, 14, 22, 0.83);
+  height: 100%;
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+.welcome {
+  padding-top: 10vh;
+
+  p {
+    padding: 35vh 10vh 10vh;
+    text-align: justify;
+  }
+}
+
+.description {
+  span {
+    margin-left: 10px;
+  }
+
+  .tools {
+    margin-top: 20px;
+    overflow: hidden;
+  }
+
+  li {
+    margin-top: 5px;
+    background-color: #114190;
+    margin-right: 10px;
+    padding: 10px;
+    color: #C1C8E4;
+  }
+}
+
+#portfolio {
+  padding-bottom: 80px;
+
+  h2 {
+    color: #C1C8E4;
+    margin-bottom: 140px;
+
+    &:after {
+      border-bottom: 2px dashed #C1C8E4;
+    }
+  }
+
+  .row {
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0 60px;
+  }
+
+  .heading {
+    color: #C1C8E4;
+    padding: 15px;
+    text-align: center;
+    position: absolute;
+    font-size: 18px;
+    letter-spacing: 2px;
+
+    span {
+      color: #635757;
+      display: block;
+      margin: 40px 0px;
+      font-size: 200%;
+    }
+  }
+
+  .description {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 15px;
+
+    > * {
+      display: none;
+      font-size: 72%;
+    }
+  }
+
+  p {
+    color: #C1C8E4;
+    margin-bottom: 30px;
+    line-height: 230%;
+  }
+
+  p, .tools {
+    width: 100%;
+  }
+
+  div section {
+    cursor: pointer;
+  }
+
+  div:nth-child(odd) {
+    section {
+      background-color: #483F3F;
+      padding: 10px;
+      border: 3px solid #4D4343;
+    }
+  }
+
+  div:nth-child(even) {
+    section {
+      background-color: #3D3636;
+      padding: 10px;
+      border: 3px solid #393333;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  section {
+    height: 100%;
+    margin-bottom: 20px;
+    width: 50%;
+    float: left;
+
+    &:hover {
+      .overlay {
+        img {
+          opacity: 0;
+          transition: opacity 0.32s;
+        }
+
+        .heading {
+          position: absolute;
+          top: -60px;
+          transition: top 0.9s;
+
+          span {
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+            position: relative;
+            top: -80px;
+            left: -30px;
+            color: rgba(4, 14, 22, 0.83);
+          }
+        }
+
+        .description > * {
+          display: block;
+        }
+      }
+
+      .description {
+        top: 140px;
+        transition: top 0.5s;
+      }
+    }
+  }
+
+  .overlay {
+    position: relative;
+    padding-bottom: 0px;
+    min-height: 550px;
+    overflow: auto;
+  }
+
+  .description h4 {
+    color: white;
+  }
+
+  .heading {
+    position: relative;
+    margin: 0 auto;
+  }
+}
+
+.navbarClass {
+  overflow: hidden;
+  background-color: #25274D;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-top: 0;
+  text-align: center;
+  display: -webkit-flex;
+  -webkit-flex-flow: row-reverse wrap;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  z-index: 2;
+
+  a {
+    float: left;
+    display: block;
+    color: #2E9CCA;
+    text-align: center;
+    padding: 0.875em 1em;
+    text-decoration: none;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+    &:hover {
+      background: #2E9CCA;
+      color: #25274D;
+    }
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1200px) {
+  #portfolio [class^="col"] section {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    min-height: 400px;
+
+    &.overlay {
+      width: 100%;
+      height: auto;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    section:hover {
+      .overlay {
+        .heading {
+          span {
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+            top: 70px;
+            left: -240px;
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 790px) {
+  #portfolio {
+    body {
+      font-size: 18px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 80px;
+    }
+
+    input {
+      text-align: center;
+    }
+
+    .description p {
+      margin-top: 40px;
+    }
+
+    section {
+      font-size: 10px;
+    }
+
+    .overlay > * {
+      font-size: 200%;
+    }
+
+    p, h6 {
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  #portfolio {
+    h2 {
+      margin-bottom: 0;
+    }
+
+    section {
+      width: 100%;
+
+      img {
+        display: none;
+      }
+    }
+
+    .description > * {
+      display: block;
+    }
+
+    .description {
+      display: table-footer-group;
+      top: 100px;
+      position: static;
+    }
+
+    .heading {
+      display: table-header-group;
+      font-size: 180%;
+      text-align: left;
+
+      span {
+        display: none;
+      }
+    }
+
+    .overlay {
+      min-height: auto;
+      padding: 20px;
+    }
+
+    section {
+      min-height: auto;
+
+      &:hover .overlay .heading {
+        position: relative;
+        top: -0px;
+        color: white;
+        -webkit-transition: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .social-links {
+    width: 100%;
+
+    li {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  h1 {
+    font-size: 300%;
+  }
+}
