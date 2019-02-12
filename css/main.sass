@@ -87,6 +87,8 @@ h6
         padding: 35vh 20vh 10vh
         text-align: justify
         font-size: 1.3em
+    h1
+        padding: 8vh 10vh 0vh
 
 .description
     span
@@ -105,7 +107,11 @@ h6
     padding-bottom: 80px
     h2
         color: #C1C8E4
-        margin-bottom: 140px
+        margin-bottom: 40px
+        text-align: center
+    h3
+        color: #C1C8E4
+        margin-bottom: 40px
         text-align: center
     .row
         margin: 0px
@@ -118,7 +124,7 @@ h6
         padding: 15px
         > *
             display: none
-            font-size: 72%
+            font-size: 90%
     p
         color: #C1C8E4
         margin-bottom: 30px
@@ -127,16 +133,11 @@ h6
         width: 100%
     div section
         cursor: pointer
-    div:nth-child(odd)
-        section
-            background-color: #483F3F
-            padding: 10px
-            border: 3px solid #4D4343
     div:nth-child(even)
         section
-            background-color: #3D3636
+            background-color: #25274D
             padding: 10px
-            border: 3px solid #393333
+            border: 3px solid #464866
     img
         width: 100%
     section
@@ -163,7 +164,7 @@ h6
                         height: 100%
                         z-index: 100
             .description
-                top: 140px
+                top: 100px
                 transition: top 0.5s
     .overlay
         position: relative
@@ -182,8 +183,27 @@ h6
                 display: block
                 margin: 40px 0px
                 font-size: 200%
-    .description h4
-        color: white
+    .description
+        h4
+            color: white
+
+#contact
+    a 
+        margin-right: 10px
+        margin-left: 10px
+        font-size: 1.5em
+    .container
+        text-align: center
+        margin-bottom: 40px
+    p
+        text-align: center
+        font-size: 2em
+    h1 
+        font-size: 3em
+
+.copyright
+    p
+        font-size: 0.8em
 
 .navbarClass
     overflow: hidden
@@ -236,53 +256,43 @@ h6
                         left: -240px
                         position: relative
 
+@media screen and (max-width: 990px)
+    #portfolio
+        h2
+            font-size: 200%
+        h3
+            font-size: 150%
+        .description > *
+            font-size: 75%
+
 @media screen and (max-width: 790px)
     .welcome
         p
             padding: 35vh 10vh 10vh
+        h1
+            font-size: 3em
+            padding: 15vh 10vh 5vh
     #portfolio
         body
-            font-size: 18px
+            font-size: 14px
             text-align: center
         h2
-            margin-top: 80px
+            margin-top: 60px
         input
             text-align: center
-        .description p
-            margin-top: 40px
+        .description
+            > *
+                font-size: 85%
+            p
+                margin-top: 40px
         section
             font-size: 10px
-        .overlay > *
-            font-size: 200%
+            min-height: 328.2px
+            &:hover
+                .description
+                    top: 30px
         p, h6
             text-align: left
-
-@media screen and (max-width: 570px)
-    #portfolio
-        h2
-            margin-bottom: 0
-        section
-            width: 100%
-        .description > *
-            display: block
-        .description
-            display: table-footer-group
-            top: 100px
-            position: static
-        .heading
-            display: table-header-group
-            font-size: 180%
-            text-align: left
-            span
-                display: none
-        .overlay
-            padding: 20px
-        section
-            &:hover .overlay .heading
-                position: relative
-                top: -0px
-                color: white
-                -webkit-transition: none
 
 @media screen and (max-width: 480px)
     .social-links
